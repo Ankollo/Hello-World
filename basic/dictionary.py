@@ -1,5 +1,4 @@
 
-
 dic1 = {'name':'Mike',
         'sex':'male',
         'age':18, 
