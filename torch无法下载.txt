@@ -1,0 +1,30 @@
+问题： conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia  无法执行
+解决：登录 https://download.pytorch.org/whl/torch_stable.html 寻找适合的版本下载
+           电脑中下载的是12.0的coda,所以torch的版本需要低于12.0
+          
+cu102/torch-1.7.1-cp38-cp38-linux_x86_64.whl
+
+cu102:表示cuda版本为10.2，
+torch-1.7.1:表示torch版本为1.7.1
+cp38:表示适用python版本为3.8
+linux:表示适用于linux系统
+x86_64:表示同时兼容32和64位系统
+
+
+
+
+
+本地配置：3060的NVIDIA    安装方法：pip install 路径\文件名.whl
+         
+torch-1.13.1+cu117-cp37-cp37m-win_amd64.whl
+torchaudio-0.13.1+cu117-cp37-cp37m-win_amd64.whl
+torchvision-0.14.1+cu117-cp37-cp37m-win_amd64.whl
+
+
+
+测试代码：
+import torch
+
+print(torch.__version__)
+print(torch.version.cuda)
+print(torch.cuda.is_available())

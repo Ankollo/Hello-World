@@ -1,7 +1,13 @@
 # Hello-World
 my first repository
 
-aaa
-bbb
-ccc
-ddd
+
+
+git pull -r
+
+git add *
+
+git commit -m "说明"
+
+git push
+
